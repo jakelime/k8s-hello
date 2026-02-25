@@ -1,6 +1,6 @@
 variables:
   PROJECT_IMAGE_NAME: src-django
-  APP_NAME: src-django
+  APP_NAME: test-ecsp
   DOCKERFILE_PATH: src-django/Dockerfile
   DOCKERFILE_CONTEXT_DIR: src-django
   VERSION_FILE_DIR: src-django

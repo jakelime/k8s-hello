@@ -1,6 +1,6 @@
 variables:
   PROJECT_IMAGE_NAME: src-nginx
-  APP_NAME: src-nginx
+  APP_NAME: test-ecsp
   DOCKERFILE_PATH: src-nginx/Dockerfile
   DOCKERFILE_CONTEXT_DIR: src-nginx
   VERSION_FILE_DIR: src-nginx

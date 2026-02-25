@@ -1,6 +1,6 @@
 variables:
   PROJECT_IMAGE_NAME: src-mgdb
-  APP_NAME: src-mgdb
+  APP_NAME: test-ecsp
   DOCKERFILE_PATH: src-mgdb/Dockerfile
   DOCKERFILE_CONTEXT_DIR: src-mgdb
   VERSION_FILE_DIR: src-mgdb

@@ -1,6 +1,6 @@
 variables:
   PROJECT_IMAGE_NAME: src-valkey
-  APP_NAME: src-valkey
+  APP_NAME: test-ecsp
   DOCKERFILE_PATH: src-valkey/Dockerfile
   DOCKERFILE_CONTEXT_DIR: src-valkey
   VERSION_FILE_DIR: src-valkey
