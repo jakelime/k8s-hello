@@ -32,18 +32,6 @@ src-mgdb:
       changes:
       - src-mgdb/**/*
 
-src-nginx:
-  stage: Trigger
-  trigger:
-    include: src-nginx/.gitlab-ci.yml
-    strategy: depend
-    forward:
-      pipeline_variables: true
-  rules:
-    - if: '$CI_COMMIT_BRANCH'
-      changes:
-      - src-nginx/**/*
-
 src-valkey:
   stage: Trigger
   trigger:
