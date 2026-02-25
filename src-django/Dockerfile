@@ -1,5 +1,5 @@
 ARG url_docker=artifact.stengglink.com:34000
-ARG url_pypi=https://artifact.stengglink.com/repository/pypi-proxy/
+ARG url_pypi=https://artifact.stengglink.com/repository/pypi-proxy/simple
 FROM ${url_docker}/python:3.13.11-slim-trixie
 
 ARG url_pypi
