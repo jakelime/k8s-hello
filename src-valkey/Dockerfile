@@ -1,4 +1,4 @@
-ARG url_docker=docker.io
+ARG url_docker=artifact.stengglink.com:34000
 ARG port_valkey=6379
 FROM ${url_docker}/valkey/valkey:8.1.4-alpine
 

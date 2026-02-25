@@ -1,4 +1,4 @@
-ARG url_docker=docker.io
+ARG url_docker=artifact.stengglink.com:34000
 FROM ${url_docker}/nginx:1.29.3-trixie
 
 # Copy the Nginx configuration file
