@@ -1,0 +1,40 @@
+variables:
+  PROJECT_IMAGE_NAME: src-nginx
+  APP_NAME: src-nginx
+  DOCKERFILE_PATH: src-nginx/Dockerfile
+  DOCKERFILE_CONTEXT_DIR: src-nginx
+  VERSION_FILE_DIR: src-nginx
+  HELM_VALUE_DIR: "src-nginx"
+
+include:
+  - project: 'devsecops-platform/master-templates'
+    ref: feature/dotnet-lib
+    file: 'ci/ci-template-microservices.gitlab-ci.yml'
+    rules:
+      - if: '$CI_COMMIT_BRANCH != "master"'
+
+  - project: 'devsecops-platform/master-templates'
+    ref: feature/dotnet-lib
+    file: 'cd/cd-template-microservices-non-prd.gitlab-ci.yml'
+    inputs: 
+      runner: "agent-CAEngineSvcEnvis-DEV"
+    rules:
+      - if: '$CI_COMMIT_BRANCH == "develop"'
+
+  - project: 'devsecops-platform/master-templates'
+    ref: feature/dotnet-lib
+    file: 'cd/cd-template-microservices-non-prd.gitlab-ci.yml'
+    inputs: 
+      runner: "agent-CAEngineSvcEnvis-DEV"
+    rules:
+      - if: '$CI_COMMIT_REF_NAME =~ /^release\/.*$/'
+      - if: '$CI_COMMIT_REF_NAME =~ /^hotfix\/.*$/'
+
+  - project: 'devsecops-platform/master-templates'
+    ref: feature/dotnet-lib
+    file: 'cd/cd-template-microservices.gitlab-ci.yml'
+    inputs: 
+      runner: "agent-CAEngineSvcEnvis-DEV"
+    rules:
+      - if: '$CI_COMMIT_BRANCH == "master"'
+
