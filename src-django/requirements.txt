@@ -1,6 +1,6 @@
 
 # Django Core and Related Packages
-Django==5.2.*
+Django==5.*.*
 django-crispy-forms
 django-filter
 django-tables2
